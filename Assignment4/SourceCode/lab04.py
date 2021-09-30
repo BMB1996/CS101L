@@ -102,11 +102,7 @@ if __name__ == "__main__":
             print()
             chip_totals.append(bank)
             round_count += 1
-        max_val = chip_totals[0]
-        for i in chip_totals:
-            if i > max_val:
-                max_val = i
            
         print("You lost all", chip_totals[0], "in", round_count, "spins")
-        print("The most chips you had was", max_val)
+        print("The most chips you had was", max(chip_totals))
         playing = play_again()
